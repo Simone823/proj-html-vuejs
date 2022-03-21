@@ -1,6 +1,12 @@
 // Import fontsource Nunito
 @import "@fontsource/nunito/index.css";
 
+// Font nunito 500
+@import "@fontsource/nunito/500.css";
+
+// Font nunito 600
+@import "@fontsource/nunito/600.css";
+
 // Reset
 * {
   margin: 0;
@@ -11,8 +17,30 @@
 // Colore di sfondo grigio sfumato scuro
 $bkg-color-gray-light-shade: #3d3d3d;
 
+// Colore di sfondo linear gradient verde
+$bkg-color-gradient-green: linear-gradient(
+  90deg,
+  hsl(95deg 68% 63%) 0%,
+  hsl(101deg 67% 64%) 8%,
+  hsl(107deg 66% 65%) 16%,
+  hsl(114deg 64% 66%) 23%,
+  hsl(121deg 63% 67%) 29%,
+  hsl(129deg 65% 65%) 36%,
+  hsl(135deg 66% 63%) 42%,
+  hsl(141deg 67% 61%) 48%,
+  hsl(146deg 68% 59%) 55%,
+  hsl(150deg 69% 57%) 62%,
+  hsl(154deg 70% 55%) 69%,
+  hsl(158deg 71% 52%) 78%,
+  hsl(162deg 76% 49%) 88%,
+  hsl(166deg 100% 43%) 100%
+);
+
 // Colore testo bianco
 $text-color-white: #ffff;
+
+// Color green
+$color-green: #00D9A6;
 
 // Img
 Img {
