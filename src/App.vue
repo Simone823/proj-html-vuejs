@@ -3,18 +3,23 @@
   <!-- App vue -->
   <div id="app">
     <MyHeader/>
+    <NavMenu/>
   </div>
 
 </template>
 
 <script>
 // Import MyHeader
-import MyHeader from "./components/MyHeader.vue"
+import MyHeader from "./components/MyHeader.vue";
+
+// Import NavMenu
+import NavMenu from "./components/NavMenu.vue";
 
 export default {
   name: 'App',
   components: {
     MyHeader,
+    NavMenu,
   }
 }
 </script>
