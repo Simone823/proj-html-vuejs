@@ -7,6 +7,7 @@
 
     <main>
       <Section_1/>
+      <Section_2/>
     </main>
 
   </div>
@@ -25,12 +26,17 @@ import NavMenu from "./components/NavMenu.vue";
 // Import Section_1
 import Section_1 from "./components/Section_1.vue";
 
+// Import Section_1
+import Section_2 from "./components/Section_2.vue";
+
+
 export default {
   name: 'App',
   components: {
     MyHeader,
     NavMenu,
     Section_1,
+    Section_2,
   }
 }
 </script>
