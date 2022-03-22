@@ -28,9 +28,9 @@
                 <div class="line"></div>
                 <!-- Descrizione -->
                 <p class="description">
-                    Far far away, behind work mountains, far from the countries Vokalia and
-                    Consonantia, there live the blind text. Separated they live in Bookmarksgrove
-                    right at the coast of the Semantics, a large language ocean. Separated they live
+                    Far far away, behind work mountains, far from the countries Vokalia and <br>
+                    Consonantia, there live the blind text. Separated they live in Bookmarksgrove <br>
+                    right at the coast of the Semantics, a large language ocean. Separated they live <br>
                     in Bookmarksgrove.
                 </p>
                 <!-- Button -->
@@ -64,12 +64,12 @@ export default {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 115px;
+    gap: 90px;
 
     .img_wrapper {
-        flex-basis: 50%;
+        flex-basis: calc((100% / 12) * 6);
+        flex-grow: 1;
         position: relative;
-        flex-grow: 2;
 
         .img_1_wrapper {
             max-width: 626px;
@@ -96,19 +96,20 @@ export default {
             overflow: hidden;
             position: absolute;
             top: 77px;
-            left: 85px;
+            left: 88px;
         }
     }
 
     .info_wrapper {
-        flex-basis: calc(100% - 50% - 115px);
+        flex-basis: calc((100% / 12) * 6 - 90px);
         flex-grow: 1;
 
         .info {
 
             .title {
                 color: $text-color-gray-dark;
-                font-size: 48px;
+                font-size: 55px;
+                font-weight: 600;
 
                 span {
                     color: $color-green;
@@ -144,7 +145,6 @@ export default {
                 color: $text-color-gray-dark;
                 margin-bottom: 38px;
                 font-size: 16px;
-                max-width: 555px;
             }
 
             .btn_readmore {
