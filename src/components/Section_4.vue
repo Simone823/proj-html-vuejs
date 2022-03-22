@@ -6,12 +6,12 @@
         <!-- Riga 1 -->
         <div class="row_1">
             <!-- Wrapper title -->
-            <div class="wrapper_title col-5">
+            <div class="wrapper_title">
                 <!-- Linea -->
                 <div class="line"></div>
                 <!-- Title -->
                 <h3 class="title">
-                    Our recent <span>web design</span> &amp; <br>
+                    Our recent <span>web design</span> &amp;
                     some example of <br>
                     past <span>projects</span>
                 </h3>
@@ -20,7 +20,7 @@
             </div>
 
             <!-- Description wrapper -->
-            <div class="description_wrapper col-7">
+            <div class="description_wrapper">
                 <p class="description">
                     Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind <br>
                     texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language <br>
@@ -35,7 +35,7 @@
             <!-- Cards wrapper -->
             <div class="cards_wrapper">
                 <!-- Card -->
-                <div class="card col-3" v-for="(element, index) in arrayCards" :key="index">
+                <div class="card" v-for="(element, index) in arrayCards" :key="index">
                     <img :src="require(`../assets/images/${element.img}`)" alt="">
                 </div>
             </div>
@@ -106,18 +106,17 @@ export default {
 .section_4 {
     padding: 215px 0;
 
-    .col-3 {
-        flex-basis: calc((100% / 12 - 5px) * 3);
-    }
-    
     .row_1 {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         row-gap: 20px;
         margin-bottom: 53px;
+        gap: 62px;
 
         .wrapper_title {
+            flex-basis: calc((100% / 12) * 5);
+            flex-grow: 1;
             padding-left: 21px;
 
             .line {
@@ -153,7 +152,8 @@ export default {
 
             .title {
                 color: $text-color-gray-dark;
-                font-size: 48px;
+                font-size: 55px;
+                font-weight: 600;
 
                 span {
                     color: $color-green;
@@ -162,9 +162,14 @@ export default {
         }
 
         .description_wrapper {
+            flex-basis: calc((100% / 12) * 7 - 62px);
+            flex-grow: 1;
             align-self: flex-end;
+            justify-content: flex-end;
 
             .description {
+                font-size: 16px;
+                line-height: 24px;
                 color: $text-color-gray-dark;
             }
         }
@@ -179,6 +184,8 @@ export default {
             margin-bottom: 118px;
 
             .card {
+                flex-basis: calc((100% / 12 - 5px) * 3);
+                flex-grow: 1;
                 aspect-ratio: 1/1;
                 border-radius: 5px;
                 overflow: hidden;
