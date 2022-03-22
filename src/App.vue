@@ -9,6 +9,7 @@
       <Section_1/>
       <Section_2/>
       <Section_3/>
+      <Section_4/>
     </main>
 
   </div>
@@ -33,6 +34,9 @@ import Section_2 from "./components/Section_2.vue";
 // Import Section_3
 import Section_3 from "./components/Section_3.vue";
 
+// Import Section_4
+import Section_4 from "./components/Section_4.vue";
+
 
 export default {
   name: 'App',
@@ -42,6 +46,7 @@ export default {
     Section_1,
     Section_2,
     Section_3,
+    Section_4,
   }
 }
 </script>
