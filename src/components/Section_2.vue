@@ -6,9 +6,9 @@
         <!-- Info wrapper -->
         <div class="info_wrapper">
             <h2 class="title">
-                We Are Here To
-                Make Your <span>Website</span>
-                Look More <span>Elegant</span>
+                We Are Here To <br>
+                Make Your <span>Website</span> <br>
+                Look More <span>Elegant</span> <br>
                 And Stylish!
             </h2>
 
@@ -95,16 +95,18 @@ export default {
     padding: 210px 0;
     display: flex;
     align-items: center;
-    gap: 78px;
+    gap: 90px;
     flex-wrap: wrap;
 
     .info_wrapper {
-        max-width: 525px;
-        padding: 0 4px;
+        flex-basis: calc((100% / 12) * 4);
+        flex-grow: 1;
+        padding: 0 21px;
 
         .title {
             font-size: 55px;
             color: $text-color-gray-dark;
+            font-weight: 600;
 
             span {
                 color: $color-green;
@@ -152,7 +154,8 @@ export default {
     }    
 
     .cards_wrapper {
-        flex-basis: calc(100% - 525px - 78px);
+        flex-basis: calc((100% / 12) * 8 - 90px);
+        flex-grow: 1;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -160,12 +163,12 @@ export default {
         padding: 8px 4px;
 
         .card {
-            flex-basis: calc(100% / 2 - 35px);
+            flex-basis: calc((100% / 12) * 6 - 35px);
+            flex-grow: 1;
             min-height: 326px;
             border-radius: 31px;
             padding: 57px 47px;
             color: $text-color-gray-dark;
-            flex-grow: 1;
             background-color: $bkg-color-white;
             filter: drop-shadow(0 0 5px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2));
 
@@ -176,6 +179,8 @@ export default {
             }
 
             .info_wrapper {
+                padding: 0;
+
                 .title {
                     font-size: 30px;
                     font-weight: 500;
