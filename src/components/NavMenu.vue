@@ -13,7 +13,7 @@
         <!-- Lista menu -->
         <ul class="menu">
             <li v-for="(element, index) in arrayMenulist" :key="index">
-                <a :href="href">{{element.name}}</a>
+                <a :href="element.href">{{element.name}}</a>
             </li>
         </ul>
 
