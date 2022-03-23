@@ -16,6 +16,7 @@
     </main>
 
     <Footer/>
+    <FooterBanner/>
 
   </div>
 
@@ -54,6 +55,9 @@ import Section_7 from "./components/Section_7.vue";
 // Import Section_8
 import Footer from "./components/Footer.vue";
 
+// Import FooterBanner
+import FooterBanner from "./components/FooterBanner.vue";
+
 
 export default {
   name: 'App',
@@ -68,7 +72,8 @@ export default {
     Section_6,
     Section_7,
     Footer,
-  }
+    FooterBanner,
+  },
 }
 </script>
 
