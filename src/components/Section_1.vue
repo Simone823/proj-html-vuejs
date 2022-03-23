@@ -1,7 +1,7 @@
 <template>
     
     <!-- Sezione 1 -->
-    <section id="sezione_1">
+    <section class="section_1">
         
         <!-- Wrapper descrizione -->
         <div class="wrapper">
@@ -95,7 +95,7 @@ export default {
 // Import common scss
 @import "../assets/scss/common.scss";
 
-section {
+.section_1 {
     padding: 127px 0;
     padding-left: 105px;
     background-color: $bkg-color-gray-light;
