@@ -19,7 +19,7 @@
 
         <!-- Buttons -->
         <div class="btn">
-            <button class="btn_purchase">Purchase</button>
+            <button class="btn_purchase btn_hover_gray"><a href="#">Purchase</a></button>
             <button class="btn_search">
                 <img src="../assets/images/search-icon.svg" alt="">
             </button>
@@ -116,6 +116,10 @@ nav {
             text-transform: uppercase;
             font-weight: 500;
             cursor: pointer;
+
+            &:hover {
+                @include hoverLink;
+            }
         }
     }
 
@@ -134,6 +138,17 @@ nav {
             background-image: $bkg-color-gradient-green;
             font-weight: 500;
             filter: drop-shadow(2px 2px 8px rgba($color: $color-green, $alpha: 0.6));
+            position: relative;
+
+            a {
+                z-index: 1;
+                position: relative;
+            }
+
+            &:hover::after {
+                @include hoverGray;
+                background-image: $bkg-color-gradient-gray-dark;
+            }
         }
 
         .btn_search {
