@@ -172,6 +172,17 @@ export default {
                 background-image: $bkg-color-gradient-gray-dark;
                 color: $text-color-white;
                 text-transform: uppercase;
+                position: relative;
+
+                a {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                &:hover::after {
+                    @include hoverGray;
+                    background-image: $bkg-color-gradient-green;
+                }
             }
         }
 
@@ -190,6 +201,12 @@ export default {
                     display: inline;
                     margin-left: 8px;
                     margin-right: 8px;
+                }
+
+                a {
+                    &:hover {
+                        @include hoverLink;
+                    }
                 }
             }
         }
