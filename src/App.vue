@@ -15,6 +15,8 @@
       <Section_7/>
     </main>
 
+    <Footer/>
+
   </div>
 
 </template>
@@ -49,6 +51,9 @@ import Section_6 from "./components/Section_6.vue";
 // Import Section_7
 import Section_7 from "./components/Section_7.vue";
 
+// Import Section_8
+import Footer from "./components/Footer.vue";
+
 
 export default {
   name: 'App',
@@ -62,6 +67,7 @@ export default {
     Section_5,
     Section_6,
     Section_7,
+    Footer,
   }
 }
 </script>
