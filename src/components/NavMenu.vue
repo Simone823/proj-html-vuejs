@@ -97,6 +97,10 @@ nav {
     flex-wrap: wrap;
     row-gap: 20px;
     gap: 25px;
+    position: sticky;
+    top: 0;
+    background-color: $bkg-color-white;
+    z-index: 999999;
 
     .logo {
         width: 198px;
