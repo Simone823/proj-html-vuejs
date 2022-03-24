@@ -156,6 +156,7 @@ export default {
                 color: $text-color-white;
                 text-transform: uppercase;
                 filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+                position: relative;
 
                 a {
                     z-index: 1;
