@@ -163,15 +163,11 @@ export default {
                 font-size: 16px;
                 font-weight: 400;
                 color: $text-color-gray-dark;
-
-                &:hover {
-                    @include hoverLink;
-                    color: $color-green;
-                }
+                @include hoverLinkGreen;
             }
 
             &:nth-child(2) {
-
+                
                 ul {
                     .link {
                         margin-bottom: 12px;
@@ -187,7 +183,6 @@ export default {
             &:nth-child(3) {
 
                 ul {
-
                     .link {
                         margin-bottom: 36px;
 
