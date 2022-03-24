@@ -155,6 +155,11 @@ export default {
                     position: relative;
                 }
 
+                &:hover {
+                    filter: drop-shadow(8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+                    transition: all 250ms linear;
+                }
+
                 &:hover::after {
                     @include hoverGray;
                     background-image: $bkg-color-gradient-gray-dark;
