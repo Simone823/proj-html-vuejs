@@ -101,6 +101,7 @@ nav {
     top: 0;
     background-color: $bkg-color-white;
     z-index: 999999;
+    box-shadow: 0 2px 10px rgba($color: $text-color-gray-dark, $alpha: 0.4);
 
     .logo {
         width: 198px;
