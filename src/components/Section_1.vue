@@ -204,9 +204,7 @@ export default {
                 }
 
                 a {
-                    &:hover {
-                        @include hoverLink;
-                    }
+                    @include hoverLinkGray;
                 }
             }
         }

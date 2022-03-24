@@ -116,10 +116,7 @@ nav {
             text-transform: uppercase;
             font-weight: 500;
             cursor: pointer;
-
-            &:hover {
-                @include hoverLink;
-            }
+            @include hoverLinkGray;
         }
     }
 
