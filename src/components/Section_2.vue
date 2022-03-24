@@ -243,4 +243,20 @@ export default {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .section_2 {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 825px) {
+
+    .section_2 {
+        .cards_wrapper {
+            flex-direction: column;
+        }
+
+    }
+}
+
 </style>
