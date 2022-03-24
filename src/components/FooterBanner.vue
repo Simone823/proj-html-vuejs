@@ -25,6 +25,11 @@
             <img src="../assets/images/arrowUp_icon.svg" alt="">
         </div>
 
+        <!-- Chat icon -->
+        <div class="chat_icon">
+            <img src="../assets/images/chat_icon.svg" alt="">
+        </div>
+
     </div>
     
 </template>
@@ -61,6 +66,7 @@ export default {
     methods: {
         // Funzione click Scrool up
         scrollUp: function() {
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
@@ -120,6 +126,25 @@ export default {
         img {
             width: 18px;
             height: 18px;
+        }
+    }
+
+    .chat_icon {
+        width: 62px;
+        height: 62px;
+        background-color: $bkg-color-blue;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 39px;
+        right: 39px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 26px;
+            height: 26px;
         }
     }
 }
