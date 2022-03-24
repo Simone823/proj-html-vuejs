@@ -36,8 +36,19 @@
             <div class="cards_wrapper">
                 <!-- Card -->
                 <div class="card" v-for="(element, index) in arrayCards" :key="index">
-                    <img :src="require(`../assets/images/${element.img}`)" alt="">
+
+                    <div>
+                        <img :src="require(`../assets/images/${element.img}`)" alt="">
+
+                    </div>
+
+                    <!-- Hover Description -->
+                    <div class="hover_description">
+                        <h1>{{element.name}}</h1>
+                        <p>{{element.type}}</p>
+                    </div>
                 </div>
+
             </div>
 
             <!-- Button -->
@@ -63,34 +74,50 @@ export default {
             arrayCards: [
                 {
                     img: "ina-soulis-227104-unsplash-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "sunisa-misa-531163-unsplash-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "355H-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "photo-1448932252197-d19750584e56-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "business-competition-PB366D8-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "cody-davis-253928-unsplash-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
 
                 {
                     img: "aa9a4539-PQGJ7HU-1024x1024.jpg",
+                    name: "A Famous Ferril Wheel",
+                    type: "Marketing",
                 },
             ],
         }
@@ -189,6 +216,59 @@ export default {
                 aspect-ratio: 1/1;
                 border-radius: 5px;
                 overflow: hidden;
+                position: relative;
+
+                .hover_description {
+                    position: absolute;
+                    left: 47px;
+                    bottom: 63px;
+                    color: $text-color-white;
+                    opacity: 0;
+                    z-index: 2;
+
+                    h1 {
+                        margin-bottom: 18px;
+                    }
+
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                }
+
+                &:hover {
+                    transform: scale(0.97);
+                    animation: cardHover 300ms linear;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        width: 100%;
+                        height: 100%;
+                        background-image: $bkg-color-gradient-green;
+                        animation: bkg 300ms linear;
+                        opacity: 0.8;
+                    }
+
+                    .hover_description {
+                        opacity: 1;
+                        transition: opacity 300ms linear;
+                    }
+
+                    @keyframes cardHover {
+                        from {
+                            transform: scale(1);
+                        }
+
+                        100% {
+                            transform: scale(0.97);
+                        }
+                    }
+                }
             }
         }
 
@@ -204,6 +284,22 @@ export default {
                 color: $text-color-white;
                 text-transform: uppercase;
                 filter: drop-shadow(0 5px 8px rgba($color: $color-green, $alpha: 0.6));
+                position: relative;
+
+                a {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                &:hover {
+                    filter: drop-shadow(8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+                    transition: all 250ms linear;
+                }
+
+                &:hover::after {
+                    @include hoverGray;
+                    background-image: $bkg-color-gradient-gray-dark;
+                }
             }
         }
     }
