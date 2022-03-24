@@ -29,6 +29,9 @@ $bkg-color-gray-light: #f9f9f9;
 // Colore di sfondo bianco
 $bkg-color-white: #ffffff;
 
+// Colore di sfondo azzurro
+$bkg-color-blue: #527ceb;
+
 // Colore di sfondo linear gradient verde
 $bkg-color-gradient-green: linear-gradient(
   90deg,
@@ -155,7 +158,6 @@ a {
   flex-grow: 1;
 }
 
-
 // Hover button
 @mixin hoverGray {
   content: "";
@@ -185,7 +187,6 @@ a {
     transition: color 250ms linear;
   }
 }
-
 
 @keyframes bkg {
   from {
