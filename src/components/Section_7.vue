@@ -239,4 +239,51 @@ export default {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .section_7 {
+
+        .sponsor_wrapper {
+            .sponsor {
+                flex-basis: calc((100% / 12) * 3 - 15px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .section_7 {
+
+        .sponsor_wrapper {
+            .sponsor {
+                flex-basis: calc((100% / 12) * 4 - 15px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section_7 {
+        .cards_wrapper {
+            flex-direction: column;
+        }
+
+        .sponsor_wrapper {
+            .sponsor {
+                flex-basis: calc((100% / 12) * 6 - 15px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .section_7 {
+
+        .sponsor_wrapper {
+            .sponsor {
+                flex-basis: calc((100% / 12) * 12 - 15px);
+            }
+        }
+    }
+}
+
 </style>
