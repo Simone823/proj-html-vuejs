@@ -149,6 +149,16 @@ export default {
                 color: $text-color-white;
                 text-transform: uppercase;
                 filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+
+                a {
+                    z-index: 1;
+                    position: relative;
+                }
+
+                &:hover::after {
+                    @include hoverGray;
+                    background-image: $bkg-color-gradient-gray-dark;
+                }
             }
         }
     }    
@@ -171,6 +181,42 @@ export default {
             color: $text-color-gray-dark;
             background-color: $bkg-color-white;
             filter: drop-shadow(0 0 5px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2));
+
+            &:hover {
+                background-image: $bkg-color-gradient-green;
+                opacity: 1;
+                filter: drop-shadow(0 0 5px rgba($color: $color-green, $alpha: 0.4));
+                animation: opacity 350ms linear;
+                transform: scale(0.97);
+
+                @keyframes opacity {
+                    from {
+                        opacity: 0;
+                        filter: drop-shadow(0 0 5px rgba($color: $color-green, $alpha: 0));
+                        transform: scale(1);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        filter: drop-shadow(0 0 5px rgba($color: $color-green, $alpha: 0.4));
+                        transform: scale(0.97);
+                    }
+                }
+
+                .title {
+                    color: $text-color-white;
+                }
+
+                .description {
+                    color: $text-color-white;
+                }
+
+                .img_wrapper {
+                    img {
+                        filter: brightness(0%) invert(100%);
+                    }
+                }
+            }
 
             .img_wrapper {
                 width: 73px;
