@@ -191,6 +191,18 @@ export default {
             color: $text-color-white;
             text-transform: uppercase;
             filter: drop-shadow(8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+            position: relative;
+
+            a {
+                z-index: 1;
+                position: relative;
+            }
+
+            &:hover::after {
+                @include hoverGray;
+                background-image: $bkg-color-gradient-green;
+                filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+            }
         }
     }
 }
