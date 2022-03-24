@@ -37,10 +37,7 @@
                 <!-- Card -->
                 <div class="card" v-for="(element, index) in arrayCards" :key="index">
 
-                    <div>
-                        <img :src="require(`../assets/images/${element.img}`)" alt="">
-
-                    </div>
+                    <img :src="require(`../assets/images/${element.img}`)" alt="">
 
                     <!-- Hover Description -->
                     <div class="hover_description">
@@ -218,6 +215,11 @@ export default {
                 overflow: hidden;
                 position: relative;
 
+                 img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+
                 .hover_description {
                     position: absolute;
                     left: 47px;
@@ -299,6 +301,47 @@ export default {
                 &:hover::after {
                     @include hoverGray;
                     background-image: $bkg-color-gradient-gray-dark;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section_4 {
+
+        .row_1 {
+            flex-direction: column;
+
+            .description_wrapper {
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .section_4 {
+        .row_2 {
+            .cards_wrapper {
+                .card {
+                    flex-basis: calc((100% / 12) * 6 - 5px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section_4 {
+
+        .row_2 {
+            .cards_wrapper {
+                padding: 0 15px;
+
+                .card {
+                    flex-basis: calc((100% / 12) * 12 - 5px);
                 }
             }
         }
