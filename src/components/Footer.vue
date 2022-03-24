@@ -163,6 +163,11 @@ export default {
                 font-size: 16px;
                 font-weight: 400;
                 color: $text-color-gray-dark;
+
+                &:hover {
+                    @include hoverLink;
+                    color: $color-green;
+                }
             }
 
             &:nth-child(2) {
