@@ -244,4 +244,26 @@ export default {
     }
 }
 
+@media screen and (max-width: 890px) {
+
+    .footer {
+        .list_wrapper {
+            .list_item {
+                flex-basis: calc((100% / 12) * 6 - 41px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .footer {
+        .list_wrapper {
+            .list_item {
+                flex-basis: calc((100% / 12) * 12 - 41px);
+            }
+        }
+    }
+}
+
 </style>
