@@ -76,6 +76,11 @@ export default {
             border-top-right-radius: 31px;
             overflow: hidden;
             position: relative;
+
+            img {
+                object-fit: cover;
+                object-position: top left;
+            }
     
             &::after {
                 content: '';
@@ -97,6 +102,11 @@ export default {
             position: absolute;
             top: 77px;
             left: 88px;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
         }
     }
 
@@ -175,7 +185,13 @@ export default {
             }
         }
     }
+}
 
+@media screen and (max-width: 1000px) {
+
+    .section_3 {
+        flex-direction: column;
+    }
 }
 
 </style>
