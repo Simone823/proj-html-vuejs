@@ -20,6 +20,11 @@
             </ul>
         </div>
 
+        <!-- Arrow up -->
+        <div class="arrow_up" @click="scrollUp()">
+            <img src="../assets/images/arrowUp_icon.svg" alt="">
+        </div>
+
     </div>
     
 </template>
@@ -50,6 +55,13 @@ export default {
                     href: "#",
                 }
             ],
+        }
+    },
+
+    methods: {
+        // Funzione click Scrool up
+        scrollUp: function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 }
@@ -87,6 +99,27 @@ export default {
         .icon {
             width: 17px;
             height: 17px;
+        }
+    }
+
+    .arrow_up {
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        bottom: 52px;
+        right: 120px;
+        background-color: $bkg-color-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 0 2px $bkg-color-gray-light-shade;
+        z-index: 8;
+
+        img {
+            width: 18px;
+            height: 18px;
         }
     }
 }
