@@ -247,5 +247,23 @@ export default {
     }
 }
 
+@media screen and (max-width: 825px) {
+    .footer_card {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section_1 {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .social {
+        justify-content: center;
+    }
+}
+
 
 </style>
