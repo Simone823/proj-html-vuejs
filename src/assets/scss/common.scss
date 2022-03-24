@@ -154,3 +154,39 @@ a {
   flex-basis: calc((100% / 12) * 12);
   flex-grow: 1;
 }
+
+// Hover
+
+// Hover button
+@mixin hoverGray {
+  content: "";
+  display: block;
+  border-radius: 50px;
+  animation: bkg 250ms linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 100%;
+}
+
+// Hover a link
+@mixin hoverLink {
+  a:hover {
+    color: $text-color-gray-light;
+    transition: color 250ms linear;
+  }
+}
+
+@keyframes bkg {
+  from {
+    width: 15px;
+    height: 15px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
