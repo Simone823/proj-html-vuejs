@@ -141,23 +141,31 @@ export default {
                 border-bottom-left-radius: 12px;
                 border-bottom-right-radius: 12px;
                 overflow: hidden;
-                filter: drop-shadow(0 0 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2)); 
+                box-shadow: 0 0 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2);
 
                 img {
                     object-fit: cover;
                     object-position: center;
+                    height: 366px;
+                    width: 100%;
                 }
             }
 
             .info_wrapper {
                 width: calc((100% / 12) * 10);
                 background-color: $bkg-color-white;
-                filter: drop-shadow(0 0 5px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2));
+                // filter: drop-shadow(0 30px 5px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2));
+                box-shadow: 0 0 5px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.2);
                 border-radius: 8px;
-                padding: 46px 44px;
+                padding: 12px 44px;
                 position: relative;
                 margin: 0 auto;
                 top: -100px;
+                min-height: 126px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
 
                 .date {
                     color: $text-color-gray-light;
@@ -195,7 +203,7 @@ export default {
             background-image: $bkg-color-gradient-gray-dark;
             color: $text-color-white;
             text-transform: uppercase;
-            filter: drop-shadow(8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+            box-shadow: 8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6);
             position: relative;
 
             a {
@@ -206,7 +214,7 @@ export default {
             &:hover::after {
                 @include hoverGray;
                 background-image: $bkg-color-gradient-green;
-                filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+                box-shadow: 8px 5px 8px rgba($color: $color-green, $alpha: 0.6);
             }
         }
     }
@@ -225,6 +233,8 @@ export default {
 @media screen and (max-width: 700px) {
     .section_6 {
         .cards_wrapper {
+            padding: 0 15px;
+
             .card {
                 flex-basis: calc((100% / 12) * 12 - 30px);
             }
