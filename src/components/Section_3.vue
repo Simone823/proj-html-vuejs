@@ -187,10 +187,29 @@ export default {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1326px) {
 
     .section_3 {
         flex-direction: column;
+        align-items: flex-start;
+
+        .info_wrapper {
+            padding: 0 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .section_3 {
+
+        .img_1_wrapper {
+            height: 300px;
+        }
+
+        .img_2_wrapper {
+            height: 300px;
+        }
     }
 }
 

@@ -181,7 +181,6 @@ export default {
         .card {
             flex-basis: calc((100% / 12) * 6 - 35px);
             flex-grow: 1;
-            min-height: 326px;
             border-radius: 31px;
             padding: 57px 47px;
             color: $text-color-gray-dark;
@@ -243,9 +242,14 @@ export default {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1326px) {
     .section_2 {
         flex-direction: column;
+        align-items: flex-start;
+
+        .cards_wrapper {
+            padding: 8px 15px;
+        }
     }
 }
 
