@@ -16,9 +16,9 @@
                     <!-- Input email -->
                     <div class="input" v-if="element.button == 'form'">
                         <!-- input -->
-                        <input type="email" placeholder="Enter Your Email Address">
+                        <input type="email" placeholder="Enter Your Email Address" v-model="inputEmailUser" @keyup.enter="getEmailUser()">
                         <!-- submit -->
-                        <button class="submit">Submit</button>
+                        <button class="submit" @click="getEmailUser()">Submit</button>
                     </div>
                     <!-- Button -->
                     <button class="btn_startnow" v-else>
@@ -48,6 +48,10 @@ export default {
 
     data () {
         return {
+
+            // Input email user
+            inputEmailUser: "",
+
             // Array cards 
             arrayCards: [
 
@@ -98,6 +102,21 @@ export default {
                     img: "client-5-2x.png",
                 },
             ],
+        }
+    },
+
+    methods: {
+        // Funzione invio e controllo inputEmailUser click button submit
+        getEmailUser: function() {
+
+            if (!this.inputEmailUser.includes("@")) {
+                alert("Manca un carattere '@'");
+            } else {
+                console.log(this.inputEmailUser);
+            }
+
+            this.inputEmailUser = "";
+
         }
     }
 }
@@ -193,7 +212,7 @@ export default {
                     background-image: $bkg-color-gradient-gray-dark;
                     color: $text-color-white;
                     text-transform: uppercase;
-                    filter: drop-shadow(0 0 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+                    box-shadow: 0 0 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6);
                     color: $text-color-gray-light;
                     position: relative;
 
@@ -211,7 +230,8 @@ export default {
                     &:hover::after {
                         @include hoverGray;
                         background-image: $bkg-color-gradient-green;
-                        filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+                        // filter: drop-shadow(8px 5px 8px rgba($color: $color-green, $alpha: 0.6));
+                        box-shadow: 8px 5px 8px rgba($color: $color-green, $alpha: 0.6);
                     }
                 }
             }
