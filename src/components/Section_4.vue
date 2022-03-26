@@ -307,14 +307,26 @@ export default {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1326px) {
     .section_4 {
 
         .row_1 {
             flex-direction: column;
+            align-items: flex-start;
 
             .description_wrapper {
                 align-self: flex-start;
+                padding: 0 15px;
+            }
+        }
+
+        .row_2 {
+            .cards_wrapper {
+                padding: 0 15px;
+
+                .card {
+                    flex-basis: calc((100% / 12) * 4 - 5px);
+                }
             }
         }
     }
