@@ -206,8 +206,8 @@ nav {
         display: none;
 
         .icon {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
         }
     }
