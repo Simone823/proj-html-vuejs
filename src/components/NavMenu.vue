@@ -19,11 +19,39 @@
 
         <!-- Buttons -->
         <div class="btn">
-            <button class="btn_purchase btn_hover_gray"><a href="#">Purchase</a></button>
+            <button class="btn_purchase"><a href="#">Purchase</a></button>
             <button class="btn_search">
                 <img src="../assets/images/search-icon.svg" alt="">
             </button>
         </div>
+
+        <!-- Dropdown menu icon -->
+        <div class="dropdown_icon">
+            <!-- Icon -->
+            <div class="icon" @click="openAndCloseDropdown()">
+                <img src="../assets/images/dropdown_icon.svg" alt="" v-if="dropdownActive == false">
+                <img src="../assets/images/dropdownClose_icon.svg" alt="" v-else>
+            </div>
+        </div>
+
+        <!-- Dropdown item -->
+        <div class="dropdown_item" v-if="dropdownActive == true">
+            <!-- Lista menu -->
+            <ul>
+                <li v-for="(element, index) in arrayMenulist" :key="index">
+                    <a :href="element.href" @click="dropdownActive = false">{{element.name}}</a>
+                </li>
+            </ul>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="btn_purchase" @click="dropdownActive = false"><a href="#">Purchase</a></button>
+                <button class="btn_search" @click="dropdownActive = false">
+                    <img src="../assets/images/search-icon.svg" alt="">
+                </button>
+            </div>
+        </div>
+
 
     </nav>
 
@@ -38,6 +66,9 @@ export default {
 
     data () {
         return {
+            // Dropdown active
+            dropdownActive: false,
+
             // Array Logo Nav
             arrayLogo: [
                 {
@@ -79,6 +110,14 @@ export default {
                 }
             ],
         }
+    },
+
+    methods: {
+
+        // Open and close dropdown menu
+        openAndCloseDropdown: function() {
+            this.dropdownActive = !this.dropdownActive;
+        },
     }
 }
 </script>
@@ -161,6 +200,106 @@ nav {
             background: none;
             cursor: pointer;
         }
+    }
+
+    .dropdown_icon {
+        display: none;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .dropdown_item {
+        width: 100%;
+        padding: 8px 8px;
+        display: none;
+
+        ul {
+            
+            li {
+                margin-bottom: 20px;
+
+                a {
+                    color: $text-color-gray-dark;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $color-green;
+                        transition: color 300ms linear;
+                    }
+                }
+            }
+
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+            .btn_purchase {
+                padding: 20px;
+                border-radius: 31px;
+                background-image: $bkg-color-gradient-green;
+                border: none;
+                cursor: pointer;
+
+                a {
+                    text-transform: uppercase;
+                    color: $text-color-white;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    filter: drop-shadow(8px 5px 8px rgba($color: $bkg-color-gray-light-shade, $alpha: 0.6));
+                    transition: all 250ms linear;
+                }
+
+                &:hover::after {
+                    @include hoverGray;
+                    background-image: $bkg-color-gradient-gray-dark;
+                }
+            }
+
+            .btn_search {
+                width: 19px;
+                height: 19px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1145px) {
+    nav {
+        .menu {
+            display: none;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        .dropdown_icon {
+            display: block;
+        }
+
+        .dropdown_item {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    nav {
+        padding: 24px 8px;
     }
 }
 
