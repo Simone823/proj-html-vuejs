@@ -1,7 +1,12 @@
-<h1>PROJ-HTML-VUEJS Live Preview</h1
-  <h2>Live Preview:</h2>
-  <h2><a href="https://proj-html-vuejs-simone-daglio.netlify.app/">https://proj-html-vuejs-simone-daglio.netlify.app/</a></h2>
+<h1>PROJ-HTML-VUEJS</h1
+<div>
+  <h1 align="center">Website Live Preview:</h1>
+  <p align="center"><a href="https://proj-html-vuejs-simone-daglio.netlify.app/"><img alt="Website" src="https://img.shields.io/website?label=CLICK&style=for-the-badge&up_color=green&up_message=Live%20demo&url=https%3A%2F%2Fproj-html-vuejs-simone-daglio.netlify.app%2F"></a></p>
+</div>
 
+
+  
+  
 <br>
 <br>
 <br>
